@@ -1,4 +1,46 @@
-# Laravel_Notes
+# Laravel Notes
+
+Catatan penulisan kode-kode Laravel
+
+
+# 1. Update Gambar dengan menghapus gambar lama.
+
+### View
+```php
+<div class="col-md-6 col-lg-4">
+    @foreach ($banner as $item )                               
+     @error('image')
+     <div class="alert alert-danger mt-2">
+        {{ $message }}
+     </div>
+     @enderror
+    <form action="{{url('updateBanner',$item->id)}}" method="post" enctype="multipart/form-data">
+    {{ csrf_field() }}
+        <img src="{{ asset('frontend/img/'.$item->image_name) }}" class="img-fluid rounded" alt="banner1">
+        <div class="form-group">
+            <input type="text" name="nama" class="form-control" id="title1" value="{{$item->image_name}}" disabled></div>
+        <div class="form-group">
+            <label for="title1">Judul Banner 1</label>
+            <input type="text" name='title'class="form-control" id="title1" value="{{$item->image_title}}">
+        </div>
+        <div class="form-group">
+            <label for="title2">Sub Judul 2 </label>
+            <input type="text" name='subtitle' class="form-control" id="title2" value="{{$item->image_subtitle}}">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Upload File Gambar</label>
+            <input type="file" class="form-control-file" id="gambar1" name="image" accept="image/*,.jpg">
+            <small id="titleHelp1" class="form-text text-muted">Format .JPG 1920x1080</small>
+        </div>
+        <div class="card-action">
+            <button type="submit" class="btn btn-success">Simpan</button>                             
+        </div>
+    </form>
+@endforeach
+</div>
+```
+
+### Controller
 
 ```php
     public function updateBanner(Request $request, $id)
@@ -12,7 +54,6 @@
         $ubah = Banner::findorfail($id);
         $oldPhoto = $ubah->image_name;
         if($request->file('image') == "") {
-
             $ubah->update([
                 'image_title'=>$request['title'],
                 'image_subtitle'=>$request['subtitle'],
@@ -34,10 +75,8 @@
             'image_name'=>$filename,
             'image_title'=>$request['title'],
             'image_subtitle'=>$request['subtitle'],
-
         ];
-        $ubah->update($dt);
-        
+        $ubah->update($dt);     
        // return redirect('/admin/banner');
         }
         if($ubah){
@@ -49,6 +88,4 @@
         }
     }
 ```
-## HAHA
-
 
