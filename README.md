@@ -2,10 +2,32 @@
 
 ![Logo](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)
 
-Catatan penulisan kode-kode Laravel
+Catatan penulisan kode-kode Laravel. Support versi laravel 8 > terbaru
 
+# Laravel Bootstrap Auth Scaffolding 
+```sh
+composer require laravel/ui
+```
 
-# 1. Update Gambar dengan menghapus gambar lama.
+```sh
+php artisan ui bootstrap --auth
+```
+
+```sh
+npm install && npm run dev
+```
+
+```sh
+php artisan migrate
+```
+
+```sh
+php artisan serve
+```
+
+> Note: Untuk build Laravel UI Auth dapat membuat perintah `npm build` 
+
+# Update Gambar dengan menghapus gambar lama.
 
 ### View
 ```php
