@@ -11,6 +11,12 @@ php artisan make:model Post –m
 ```sh
 php artisan migrate
 ```
+```sh
+php artisan migrate --path=/database/migrations/fileName.php
+```
+```sh
+php artisan migrate:rollback --path=/database/migrations/fileName.php
+```
 
 # Laravel Bootstrap Auth Scaffolding 
 ```sh
