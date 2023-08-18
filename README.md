@@ -25,7 +25,7 @@ php artisan migrate
 php artisan serve
 ```
 
-> Note: Untuk build Laravel UI Auth dapat membuat perintah `npm build` 
+> Note: Untuk build Laravel UI Auth dapat membuat perintah `npm run build` 
 
 # Update Gambar dengan menghapus gambar lama.
 
