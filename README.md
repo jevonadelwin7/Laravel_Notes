@@ -4,6 +4,14 @@
 
 Catatan penulisan kode-kode Laravel. Support versi laravel 8 > 
 
+# Laravel Migration
+```sh
+php artisan make:model Post –m
+```
+```sh
+php artisan migrate
+```
+
 # Laravel Bootstrap Auth Scaffolding 
 ```sh
 composer require laravel/ui
