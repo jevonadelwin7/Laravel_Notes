@@ -39,6 +39,10 @@ php artisan migrate
 php artisan serve
 ```
 
+```sh
+npm build
+```
+
 > Note: Untuk build Laravel UI Auth dapat membuat perintah `npm run build` 
 
 # Update Gambar dengan menghapus gambar lama.
