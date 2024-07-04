@@ -43,7 +43,28 @@ php artisan serve
 npm build
 ```
 
-> Note: Untuk build Laravel UI Auth dapat membuat perintah `npm run build` 
+> Note: Untuk build Laravel UI Auth dapat membuat perintah `npm run build`
+
+
+# Error file_put_contents......Failed to open stream: No such file or directory
+```sh
+php artisan config:cache
+```
+```sh
+php artisan config:clear
+```
+```sh
+php artisan cache:clear
+```
+```sh
+php artisan view:clear
+```
+```sh
+php artisan route:clear
+```
+```sh
+composer install
+```
 
 # Update Gambar dengan menghapus gambar lama.
 
